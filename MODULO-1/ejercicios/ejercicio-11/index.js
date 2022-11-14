@@ -30,6 +30,28 @@ function mayorDeEdad (personas){
 
 mayorDeEdad(personas);
 
-console.log("El más viejo tiene: " + Math.max.apply(Math, personas.map(function(persona) { return persona.edad; })));
-console.log("El más jóven tiene: " + Math.min.apply(Math, personas.map(function(persona) { return persona.edad; })));
+function masJoven(personas) {
+    let masJoven = personas[0];
+    for (let i = 1; i < personas.length; i++) {
+      if (personas[i].edad < masJoven.edad) {
+        masJoven = personas[i];
+      }
+    }
+    return masJoven;
+  }
+  
+  console.log(masJoven(personas));
+
+  function masViejo(personas) {
+    let masViejo = personas[0];
+    for (let i = 1; i < personas.length; i++) {
+      if (personas[i].edad > masViejo.edad) {
+        masViejo = personas[i];
+      }
+    }
+    return masViejo;
+  }
+  
+  console.log(masViejo(personas));
+
 
