@@ -10,4 +10,4 @@ let multiplicacion = numero1 * numero2;
 console.log(multiplicacion);
 
 let division = numero1 / numero2;
-console.log(division);
+console.log(division)
